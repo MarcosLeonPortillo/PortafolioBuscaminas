@@ -1,6 +1,6 @@
 from django import forms
 
-class tableForm(forms.Form):
-    fila = forms.CharField(label='Fila:',max_length=20)
-    columna = forms.CharField(label='Columna',max_length=15)
-
+class CreaTableroForm(forms.Form):
+    filas = forms.IntegerField(label='Filas',min_value=1, max_value=20, required= True, initial=2)
+    columnas = forms.IntegerField(label='Columnas', min_value=1, max_value=15, required=True, initial=2)
+    nMinas = forms.IntegerField(label='Minas', min_value=1, max_value=15, required=True, initial=2)
