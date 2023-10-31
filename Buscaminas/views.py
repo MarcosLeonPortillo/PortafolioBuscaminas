@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import CreaTableroForm
+import random
 # Create your views here.
 
 def index(request):
